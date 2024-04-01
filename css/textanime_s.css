@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Marlin Geo';
+    src: url('../font/MarlinGeo-Medium.eot');
+    src: local('../font/Marlin Geo Medium'), local('MarlinGeo-Medium'),
+        url('../font/MarlinGeo-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../font/MarlinGeo-Medium.woff2') format('woff2'),
+        url('../font/MarlinGeo-Medium.woff') format('woff'),
+        url('../font/MarlinGeo-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h1, h2, h3, h4 ,h5, h6 {
+    font-size: inherit;
+    font-weight: normal;
+}
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+body {
+    font-family: 'Marlin Geo';
+    color: #fff;
+    background-color: #000;
+}
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    overflow:hidden;
+    border: solid 2px #fff;
+    padding-top: 3rem;
+}
+h1 {
+    font-size: 8vw;
+}
+/* .split {
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    display: inline-block;
+} */
