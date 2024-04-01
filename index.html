@@ -11,8 +11,9 @@
 
     <script src="lib/jquery-3.7.1.min.js"></script>
     <script src="lib/fullpage.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js"></script> -->
+    <script src="https://www.unpkg.com/spltjs@1.1.0"></script> <!-- 스플리트 텍스트 대체 -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script> <!-- @@팬시박스 -->
 
     <script>
@@ -35,10 +36,11 @@
             let mainPage = document.querySelector('#fullpage');
             let fpDp = document.querySelector('#fp-nav');
 
-            setTimeout(() => {
+            /* setTimeout(() => {
                 setTimeout(() => {
-                    intro.style.display = 'block'; /* 💥💥임시 */
+                    intro.style.display = 'block';
                     intro.style.top = '0';
+
                 }, 0);
 
                 setTimeout(() => {
@@ -53,15 +55,50 @@
 
                 setTimeout(() => {
                     intro.style.top = '-100vh';
-                    /* intro.style.position = 'static';   */
+                }, 4600);
+            }) */
+
+            //인트로 타이틀 애니메이션 with gsap
+            /* var tl = gsap.timeline();
+            split = new SplitText(".title--intro", { type: "chars" }),
+                tl.from(".sub-title--intro", { opacity: 0, x: -50, ease: "back" }, "=1")
+            tl.from(split.chars, { opacity: 0, y: 100, duration: 0.8, ease: "back", stagger: 0.08 }) */
+            // 인트로 스플리트 텍스트 대체
+
+            setTimeout(() => {
+                setTimeout(() => {
+                    intro.style.display = 'block';
+                    intro.style.top = '0';
+                }, 0);
+                //밑으로 내려가기
+                setTimeout(() => {
+                    introSubTitle.style.top = '127%'
+                    introSubTitle.style.transition = '0.75s ease-out'
+
+                }, 3400);
+                //밑으로 내려가기
+                setTimeout(() => {
+                    introTitle.style.transform = 'translateY(100%)'
+                    introTitle.style.transition = '0.85s ease-out'
+                }, 3800);
+                setTimeout(() => {
+                    intro.style.top = '-100vh';
                 }, 4600);
             })
 
-            //인트로 타이틀 애니메이션 with gsap
-            var tl = gsap.timeline();
-            split = new SplitText(".title--intro", { type: "chars" }),
-                tl.from(".sub-title--intro", { opacity: 0, x: -50, ease: "back" }, "=1") //"=1" =숫자 : 실행시간
-            tl.from(split.chars, { opacity: 0, y: 100, duration: 0.8, ease: "back", stagger: 0.08 })
+        
+            splt({
+                reveal: true
+            });
+
+            anime({
+                targets: '.reveal',
+                translateY: [0, 20],
+                direction: 'alternate',
+                loop: 1,
+                delay: anime.stagger(25),
+                easing: 'cubicBezier(.71,-0.77,.43,1.67)'
+            })
 
             //다크 라이트 모드
             let header = document.getElementsByClassName('header')[0];
@@ -188,7 +225,7 @@
             <div class="intro">
                 <div class="wrap--intro">
                     <div class="wrap_sub-title--intro">
-                        <div class="sub-title--intro">Welcome to My</div>
+                        <div class="sub-title--intro reveal">Welcome to My</div>
                     </div>
 
                     <div class="wrap_title--intro">
@@ -387,7 +424,8 @@
                             </ul>
                             <div class="btn_wrap--s2">
                                 <a href="img/ppt_아비브.pdf" target="_blank" class="btn--s2">process</a>
-                                <a href="https://eunjilee29.github.io/abib_drenewal/" target="_blank" class="btn--s2">website</a>
+                                <a href="https://eunjilee29.github.io/abib_drenewal/" target="_blank"
+                                    class="btn--s2">website</a>
                             </div>
                         </div>
                     </div><!-- .cont1 //abib end -->
@@ -604,7 +642,8 @@
                                 </li>
                             </ul>
                             <div class="btn_wrap--s2">
-                                <a href="https://eunjilee29.github.io/changbi/" target="_blank" class="btn--s2 website">website</a>
+                                <a href="https://eunjilee29.github.io/changbi/" target="_blank"
+                                    class="btn--s2 website">website</a>
                             </div>
                         </div>
                     </div><!-- .cont1 //changbi end -->
