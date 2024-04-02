@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로딩텍스트애니메이션</title>
+    <link rel="stylesheet" href="css/textanime.css">
+</head>
+
+<body>
+    <div class="intro">
+        <span class="sub-text--intro">Welcome to My</span>
+        <div class="wrap_title--intro">
+            <h1 class="title--intro">
+                Portfolio
+            </h1><!-- .wrap_title--intro end -->
+        </div><!-- .wrap_title--intro end -->
+    </div><!-- .intro end -->
+
+
+    <script>
+        window.onload = () => {
+
+            let intro = document.querySelector('.intro');
+            let titleIntro = document.querySelector('.title--intro');
+
+            setTimeout(() => {
+
+                setTimeout(() => {
+                    intro.style.top = '0';
+                }, 0);
+
+                setTimeout(() => {
+                    intro.style.top = '100vh';
+                }, 7000);
+
+            })
+        }; //script end
+    </script>
+</body>
+
+</html>

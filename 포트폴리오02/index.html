@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -39,52 +39,37 @@
 
             setTimeout(() => {
                 setTimeout(() => {
-                    intro.style.display = 'none';
+                    intro.style.display = 'block'; /* 💥💥임시 */
                     intro.style.top = '0';
-                    introSubTitle.style.transform = 'translateX(-7%)';
-                    introTitle.style.transform = 'translateY(100%)';
                 }, 0);
 
-                setTimeout(() => {   
-                    introSubTitle.style.opacity = '1';       
-                    introSubTitle.style.transform = 'translateX(0%)';                            
-                }, 1000);                  
-                
-                setTimeout(() => {                    
+                setTimeout(() => {
+                    introSubTitle.style.top = '127%'
+                    introSubTitle.style.transition = '0.75s ease-out'
                     splt({
                         reveal: true
                     });
 
                     anime({
                         targets: '.reveal',
-                        translateY: [-220],
-                        direction: 'normal', /* 진행방향 */
+                        translateY: [0, 200],
+                        direction: 'alternate',
                         loop: 1,
-                        delay: anime.stagger(120),
-                        /* easing: 'cubicBezier(.71,-0.77,.43,1.67)', */ /* 원본 */
-                        easing: 'cubicBezier(.71,-0.27,.23,1.2)',
+                        delay: anime.stagger(25),
+                        easing: 'cubicBezier(.71,-0.77,.43,1.67)',
+
+
                     });
-                }, 1200);
+                }, 2000);
 
-                setTimeout(() => {   
-                    introTitle.style.opacity = '1';                                     
-                }, 1600);  
+               /*  setTimeout(() => {
+                    introTitle.style.transform = 'translateY(100%)'
+                    introTitle.style.transition = '0.85s ease-out'
+                }, 3800); */
 
-                setTimeout(() => {
-                    introSubTitle.style.top = '127%'
-                    introSubTitle.style.transition = '0.7s ease-out'
-                }, 3400);
-
-                setTimeout(() => {
-                    introTitle.style.transform = 'translateY(200%)'
-                    introTitle.style.transition = '0.75s ease-out'
-                }, 3700);
-
-                setTimeout(() => {
-                    intro.style.top = '-100vh';
-                    intro.style.transition = '0.6s ease-out';
-                }, 4200);
+                
             })
+
 
             //다크 라이트 모드
             let header = document.getElementsByClassName('header')[0];
@@ -224,7 +209,7 @@
                             <span class="reveal">l</span>
                             <span class="reveal">i</span>
                             <span class="reveal">o</span>
-
+                         
 
                         </p>
                     </div>
@@ -657,11 +642,11 @@
                         <a href="img/torn-paper-effect-f.jpg" data-fancybox="images" data-caption="photoshop">
                             <img src="img/torn-paper-effect-f.jpg" alt="item02">
                         </a>
-                        <a href="img/투고그린프로모션.jpg" data-fancybox="images" data-caption="photoshop">
-                            <img src="img/투고그린프로모션.jpg" alt="item03">
+                        <a href="img/반값포스터.jpg" data-fancybox="images" data-caption="photoshop">
+                            <img src="img/반값포스터.jpg" alt="item03">
                         </a>
-                        <a href="img/왓더버거프로모션.jpg" data-fancybox="images" data-caption="illustrator">
-                            <img src="img/왓더버거프로모션.jpg" alt="item04">
+                        <a href="img/네이버워크.jpg" data-fancybox="images" data-caption="photoshop">
+                            <img src="img/네이버워크.jpg" alt="item04">
                         </a>
                         <a href="img/부산기획상품전.jpg" data-fancybox="images" data-caption="photoshop">
                             <img src="img/부산기획상품전.jpg" alt="item5">
@@ -669,36 +654,32 @@
                         <a href="img/CEO.jpg" data-fancybox="images" data-caption="photoshop">
                             <img src="img/CEO.jpg" alt="item6">
                         </a>
-                        <a href="img/여백_반값포스터.jpg" data-fancybox="images" data-caption="photoshop">
-                            <img src="img/여백_반값포스터.jpg" alt="item7">
+                        <a href="img/테마파크애견동반펜션.jpg" data-fancybox="images" data-caption="photoshop">
+                            <img src="img/테마파크애견동반펜션.jpg" alt="item7">
                         </a>
-                        <a href="img/네이버워크.jpg" data-fancybox="images" data-caption="photoshop">
-                            <img src="img/네이버워크.jpg" alt="item8">
-                        </a>
-                        <a href="img/럭키한데이포스터.jpg" data-fancybox="images" data-caption="illustrator">
-                            <img src="img/럭키한데이포스터.jpg" alt="item9">
-                        </a>
-                        <a href="img/링텍스트.jpg" data-fancybox="images" data-caption="illustrator">
-                            <img src="img/링텍스트.jpg" alt="item10">
-                        </a>
-                        <a href="img/summercoming포스터.jpg" data-fancybox="images" data-caption="photoshop">
-                            <img src="img/summercoming포스터.jpg" alt="item11">
-                        </a>
-                        <a href="img/새학기문구포스터psd.jpg" data-fancybox="images" data-caption="photoshop">
-                            <img src="img/새학기문구포스터psd.jpg" alt="item12">
-                        </a>
-                        <a href="img/화장품포스터.jpg" data-fancybox="images" data-caption="photoshop">
-                            <img src="img/화장품포스터.jpg" alt="item11">
+                        <a href="img/수험생특별할인그레인.jpg" data-fancybox="images" data-caption="photoshop">
+                            <img src="img/수험생특별할인그레인.jpg" alt="item8">
                         </a>
                         <a href="img/시카크림_포토샵_상세페이지.jpg" data-fancybox="images" data-caption="photoshop">
-                            <img src="img/메디큐브시카크림01.jpg" alt="item12">
+                            <img src="img/메디큐브시카크림01.jpg" alt="item9">
                         </a>
                         <a href="img/렌터카_상세페이지.jpg" data-fancybox="images" data-caption="photoshop">
-                            <img src="img/썸네일_렌터카_상세페이지.jpg" alt="item12">
+                            <img src="img/썸네일_렌터카_상세페이지.jpg" alt="item10">
                         </a>
                         <a href="img/부산시티투어_상세페이지.jpg" data-fancybox="images" data-caption="photoshop">
-                            <img src="img/썸네일_부산시티투어_상세페이지.jpg" alt="item12">
+                            <img src="img/썸네일_부산시티투어_상세페이지.jpg" alt="item11">
                         </a>
+                        <a href="img/Untitled-1.jpg" data-fancybox="images" data-caption="photoshop">
+                            <img src="img/Untitled-1.jpg" alt="item12">
+                        </a>
+                        <!-- last-child -n+2 -->
+                        <a href="img/Untitled-b.jpg" data-fancybox="images" data-caption="photoshop">
+                            <img src="img/Untitled-b.jpg" alt="item13">
+                        </a>
+                        <a href="img/Untitled-b.jpg" data-fancybox="images" data-caption="photoshop">
+                            <img src="img/Untitled-b.jpg" alt="item14">
+                        </a>
+
                     </div><!-- list end -->
                 </div><!-- #section3 end -->
                 <div class="section contact" id="section4">
