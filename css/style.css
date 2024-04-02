@@ -275,6 +275,7 @@ nav .gnb li {
 /* section (slide 03) ----------------------------------- */
 #section0 {
     height: 100vh;   
+    background-color: #fff;
 }
 #section0 .inner {
     position: relative;
@@ -463,6 +464,10 @@ nav .gnb li {
 
 /* section2 (slide 03) ----------------------------------- */
 #section2 {
+    background: rgb(138,146,152);
+    background: linear-gradient(0deg, rgba(138,146,152,0.55) 0%, rgba(233,232,228,0) 100%);
+    /* background: rgb(143,159,172);
+    background: linear-gradient(0deg, rgba(143,159,172,1) 0%, rgba(236,241,242,1) 100%); 블루 */
 }
 /* 다크 라이트모드 제거 */
 .fp-viewing-3rdPage .wrap_mode_btn {
@@ -492,14 +497,6 @@ nav .gnb li {
 .cont1.goeun_c {
     margin: 200px 0 250px;
 }
-/* @keyframes item {
-    0% {
-        bottom: -20px;
-    }
-    100% {
-        bottom: 0;
-    }
-} */
 .mockupimg {
     background: url(../img/abib_d.png) -57px center /920px no-repeat;
     width: 800px;
@@ -736,6 +733,9 @@ nav .gnb li {
 /* section3 (slide 04) ----------------------------------- */
 /* @@ section3 (slide 04) ----------------------------------- */
 #section3 {
+    /* background: rgb(138,146,152);
+    background: linear-gradient(0deg, rgba(138,146,152,0.55) 0%, rgba(233,232,228,0) 100%); */
+    background-color: #c0c4c738;
 }
 #section3 .text_bg {
 }
@@ -745,6 +745,19 @@ nav .gnb li {
     justify-content: center;
     margin: 300px 200px 100px;
     position: relative;
+}
+#section3::before {
+    height: 40%;
+    width: 100%;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    /* background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 27%, rgba(0,0,0,0.1) 56%, rgba(0,0,0,0) 88%); 기존*/
+    background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 27%, rgba(0,0,0,0.1) 56%, rgba(0,0,0,0) 88%); /* 기존 더 어둡게 */
 }
 #section3 .list p {
     position: absolute;
@@ -789,6 +802,8 @@ nav .gnb li {
 
 /* section4 (slide 05) ----------------------------------- */
 #section4 {
+    background-color: #000;
+    color: #fff;
     position: relative;
     width: 100%;
 }
@@ -798,6 +813,8 @@ nav .gnb li {
     bottom: -60px;
     top: auto;
     font-size: 496px;
+    color: #ffffff33;
+    z-index: 9;
 }
 #section4 .arrow {
     display: inline-block;
@@ -868,14 +885,23 @@ nav .gnb li {
 }
 /* 로고 이미지 url */
 .fp-viewing-5thPage .header h1 img {
-    content: url(../img/logo.png);
+    content: url(../img/reversed_logo.png);
 } 
 /* 네비게이션 색상 초기화 */
-.fp-viewing-5thPage .header nav .gnb {
-    color: #000;
+.fp-viewing-5thPage .header nav .gnb li {
+    color: #fff;
+}
+.fp-viewing-5thPage #fp-nav ul li a span {
+    background: #fff;
+}
+.fp-viewing-5thPage #fp-nav ul li .fp-tooltip {
+    color: #fff;
 }
 
 /* .footer ----------------------------------- */
+.footer {
+    background-color: #000;
+}
 .footer .fp-auto-height {
     height: auto !important;
 }
@@ -893,10 +919,14 @@ nav .gnb li {
     display: flex;
     flex-direction: column;
     color: #666;
+    color: #fff;
 }
 .inner--footer .text--footer {
     font-size: 14px;
     line-height: 1.2;
+}
+.inner--footer .text--footer {
+    color: #ffffffde;
 }
 .link--footer {
     display: flex;
@@ -904,10 +934,11 @@ nav .gnb li {
     top: 50%;
     right: 20.8%;
     transform: translate(-50%, -50%);
+    z-index: 99;
 }
 .link--footer a {
     display: inline-block;
-    border: 2px solid #333;
+    border: 2px solid #ffffffde;
     border-radius: 20px;
     line-height: 34px;
     color: #333;
@@ -917,38 +948,11 @@ nav .gnb li {
     font-family: var(--font-en);
     font-weight: bold;
     padding: 0 20px;
+    color: #ffffffde;
 }
-
-/* 깃허브 레주메 버튼 옆 이미지 첨가 위한 태그! */
-/* .link--footer a::before { 
-    content: '';
-    display: inline-block;
-    background-image: url(../img/);
-    background-size: 32px 32px;
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
-    margin-right: 20px;
-    position: absolute;
-    bottom: -8px;
-    right: -31px;
-} */
-/* .link--footer a:last-child::before {
-    content: '';
-    display: inline-block;
-    background-image: url(../img/);
-    background-size: 32px 32px;
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
-    margin-right: 20px;
-    position: absolute;
-    bottom: -8px;
-    right: -31px;
-} */
 .link--footer a:hover {
-    color: #fff;
-    background-color: #333;
+    color: #000;
+    background-color: #fff;
 }
 /* 다크 라이트모드 제거 */
 .fp-viewing-6thPage .wrap_mode_btn {
@@ -956,11 +960,17 @@ nav .gnb li {
 }
 /* 로고 이미지 url */
 .fp-viewing-6thPage .header h1 img {
-    content: url(../img/logo.png);
+    content: url(../img/reversed_logo.png);
 } 
 /* 네비게이션 색상 초기화 */
-.fp-viewing-6thPage .header nav .gnb {
-    color: #000;
+.fp-viewing-6thPage .header nav .gnb li {
+    color: #fff;
+}
+.fp-viewing-6thPage #fp-nav ul li a span {
+    background: #fff;
+}
+.fp-viewing-6thPage #fp-nav ul li .fp-tooltip {
+    color: #fff;
 }
 
 @media screen and (max-width: 1358px) {
