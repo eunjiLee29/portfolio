@@ -464,10 +464,11 @@ nav .gnb li {
 
 /* section2 (slide 03) ----------------------------------- */
 #section2 {
-    background: rgb(138,146,152);
-    background: linear-gradient(0deg, rgba(138,146,152,0.55) 0%, rgba(233,232,228,0) 100%);
+    /* background: rgb(138,146,152);
+    background: linear-gradient(0deg, rgba(138,146,152,0.55) 0%, rgba(233,232,228,0) 100%); 원본 그레이 */
     /* background: rgb(143,159,172);
     background: linear-gradient(0deg, rgba(143,159,172,1) 0%, rgba(236,241,242,1) 100%); 블루 */
+    background: url(../img/14pxgrainwhite.jpg) center center / cover no-repeat;
 }
 /* 다크 라이트모드 제거 */
 .fp-viewing-3rdPage .wrap_mode_btn {
@@ -570,10 +571,24 @@ nav .gnb li {
         transform: translateY(0);
     }
 }
-.mockupimg.changbi span:hover img  {
-    animation: imgSlideFn 14s infinite alternate ease-in-out; /* linear */
+.mockupimg.ikea span:hover img  {
+    animation: imgSlideIkea 14s infinite alternate ease-in-out; /* linear */
 }
-@keyframes imgSlideFn {
+@keyframes imgSlideIkea {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-85.5%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.mockupimg.changbi span:hover img  {
+    animation: imgSlideCb 14s infinite alternate ease-in-out; /* linear */
+}
+@keyframes imgSlideCb {
     0% {
         transform: translateY(0);
     }
@@ -651,7 +666,7 @@ nav .gnb li {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-79%);
+        transform: translateY(-85%);
     }
     100% {
         transform: translateY(0);
@@ -739,6 +754,7 @@ nav .gnb li {
     /* background: rgb(138,146,152);
     background: linear-gradient(0deg, rgba(138,146,152,0.55) 0%, rgba(233,232,228,0) 100%); */
     background-color: #c0c4c738;
+    background: url(../img/21px-grain-white-bg-그레인배경.jpg) center center / cover no-repeat;
 }
 #section3 .text_bg {
 }
