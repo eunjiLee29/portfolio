@@ -787,7 +787,7 @@ nav .gnb li {
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 9;
+    z-index: 0;
     /* background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 27%, rgba(0,0,0,0.1) 56%, rgba(0,0,0,0) 88%); 기존*/
     background: rgb(0,0,0);
