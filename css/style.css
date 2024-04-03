@@ -133,19 +133,19 @@ body {
     background-color: #fff;  
     min-width: 1920px; 
 }
-body.intro_wrap ::before {
-    display: block;
+body.intro_wrap::before {
+    display: none;
 }
 body::before {
     content: '';
     background-color: #000;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 999999999999999;
-    display: none;
+    display: block;
 }
 /* body.on (x) body 안 특정 스타일에게 클래스 on 붙이기 */
 .fp-viewing-1stPage.on #fp-nav ul li a span {
