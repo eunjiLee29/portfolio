@@ -31,11 +31,13 @@
             let introTitle = document.querySelector('.title--intro');
 
             let headerDp = document.querySelector('header');
+            let introWrap = document.querySelector('body');
             let mainPage = document.querySelector('#fullpage');
             let fpDp = document.querySelector('#fp-nav');
 
             setTimeout(() => {
                 setTimeout(() => {
+                    introWrap.classList.add('.intro_wrap');
                     intro.style.display = 'block';
                     intro.style.top = '0';
                     introSubTitle.style.transform = 'translateX(-7%)';
@@ -43,6 +45,7 @@
                 }, 0);
 
                 setTimeout(() => {
+                    
                     introSubTitle.style.opacity = '1';
                     introSubTitle.style.transform = 'translateX(0%)';
                 }, 1000);
