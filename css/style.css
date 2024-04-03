@@ -130,7 +130,8 @@
 body {
     font-family: var(--font-kr);
     color: #000;
-    background-color: #fff;   
+    background-color: #fff;  
+    min-width: 1920px; 
 }
 /* body.on (x) body 안 특정 스타일에게 클래스 on 붙이기 */
 .fp-viewing-1stPage.on #fp-nav ul li a span {
