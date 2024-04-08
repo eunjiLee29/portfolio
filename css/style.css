@@ -843,10 +843,10 @@ background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 27%, rgba(
 }
 #section4 .text_bg{
     /* right: -33px; */
-    right: 33px;
+    right: 81px;
     bottom: -60px;
     top: auto;
-    font-size: 496px;
+    font-size: 475px;
     color: #ffffff33;
     z-index: 9;
 }
